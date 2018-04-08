@@ -1,0 +1,49 @@
+<!DOCTYPE Html>
+<html>
+<head>
+<title>Let VS Const</title>
+</head>
+<body>
+<h1>Let Vs Const</h1>    
+<p>Let example <br/> let number = 40; <br />
+    let number = 30; will give an error <br/> but to reassign a value for number, use the following example <br />
+    number = 30;
+</p>
+    
+<script type="text/javascript">
+
+    let number = 40;
+    
+    // Following code will show an error
+    if (number < 60) {
+        let number = 30;
+    }
+    
+    // Valid code
+    if (number < 60) {
+        number = 30;
+    }
+
+    // type number in console to see the value
+    
+    
+    
+    const person = {
+        name: 'Ali',
+        age: 31,
+    }
+    
+    person.email = "aliimrankhan86@gmail.com"
+    
+    /* The const person can't be changed but the properties 
+    are mutable - check above example */
+    
+    /* type person in console to see mutated values */
+    
+    
+
+</script>
+    
+    
+</body>
+</html>
