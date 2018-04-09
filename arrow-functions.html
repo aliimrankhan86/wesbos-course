@@ -1,0 +1,40 @@
+<!DOCTYPE Html>
+<html>
+<head>
+<title>Arrow Functions -> -></title>
+</head>
+<body>
+<h1>Arrow Functions -> -></h1>    
+    
+<script type="text/javascript">
+    const names = ['Ali', 'Jawad', 'Salman', 'Kamran', 'Zeeshan'];
+    
+    const fullNames = names.map(function(name, index) {
+        console.log(name + ' Khan');
+    });
+    
+    const fullNames2 = names.map((item) => {
+        console.log(item + ' Khan'); 
+    })
+    
+    const fullNames3 = names.map(itemName => {
+        console.log(itemName + ' khan');
+    })
+    
+    const fullNames4 = names.map(item => item + ' khan')
+    
+    const fullNames5 = names.map(() => console.log('No Arguments'));
+    
+    const sayMyName = (name) => {
+        alert('Hello ' + name);
+    }
+    
+    sayMyName('Ali');
+    
+    console.log(fullNames5);
+    
+    
+</script>
+    
+</body>
+</html>
