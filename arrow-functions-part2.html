@@ -12,34 +12,32 @@
     const race = '100m Dash';
     const winners = ['Hunter Gath', 'Singa Song', 'Imda Bos'];
     
-    const win = winners.map((winner, i) => ({
-        name: winner,
-        race,
-        /* instead of typing race: race ES6 allows you to do it directly */
-        place: i + 1
+    const win = winners.map((winner,i) => ({
+       name: winner,
+       race,
+       place: i + 1
     }));
     
-    console.table(win);
+   console.table(win);
     
     
-    const ages = [23,60,41,30,78,21,18,99];
+   // ES6 way of doing this       
+   const ages = [22,39,67,30,61,67,48,78];
+   const seniors = ages.filter(age => age >= 60)
+   console.table(seniors);
+   console.log('New way practiced above');    
     
-    /* New way of filtering through an array
-    and returning a new array ES6 */
-    const old = ages.filter(age => age >= 60);
-    console.table(old);
     
-
-    /* Old Way of filtering through an array 
-    and returning a new array ES5 */
-    const oldAge = ages.filter(function(age) {
-        if (age >= 60) {
-            return ages;
-        } 
-    });
+  // Old Javascript way of doing this - Just trying
+  var oldSeniors = ages.filter(function(personAge){
+    if (personAge >= 60) {
+        return personAge;
+    } 
+  });
     
-    console.log('old way');
-    console.table(oldAge);
+  console.log('old way practiced above');
+  console.table(oldSeniors);    
+    
     
     
 </script>
