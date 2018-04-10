@@ -1,0 +1,48 @@
+<!DOCTYPE Html>
+<html>
+<head>
+<title>Arrow Functions Part 2 -> -></title>
+</head>
+<body>
+<h1>Arrow Functions Part 2 -> -></h1>    
+    
+<script type="text/javascript">
+    // We are creating a table of the race winner
+    
+    const race = '100m Dash';
+    const winners = ['Hunter Gath', 'Singa Song', 'Imda Bos'];
+    
+    const win = winners.map((winner, i) => ({
+        name: winner,
+        race,
+        /* instead of typing race: race ES6 allows you to do it directly */
+        place: i + 1
+    }));
+    
+    console.table(win);
+    
+    
+    const ages = [23,60,41,30,78,21,18,99];
+    
+    /* New way of filtering through an array
+    and returning a new array ES6 */
+    const old = ages.filter(age => age >= 60);
+    console.table(old);
+    
+
+    /* Old Way of filtering through an array 
+    and returning a new array ES5 */
+    const oldAge = ages.filter(function(age) {
+        if (age >= 60) {
+            return ages;
+        } 
+    });
+    
+    console.log('old way');
+    console.table(oldAge);
+    
+    
+</script>
+    
+</body>
+</html>
