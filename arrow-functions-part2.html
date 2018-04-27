@@ -11,34 +11,50 @@
     
     const race = '100m Dash';
     const winners = ['Hunter Gath', 'Singa Song', 'Imda Bos'];
+
+
+    /* ES6 Example of implicit return meaning returning an object */
+    const win = winners.map((item, index) => (
+        {
+          name: item, 
+          race: race, 
+          place: index + 1 
+        } 
+      )
+    );
+    /* The above is retuning an object in each iteration */
+
+    console.table(win);
+
+   /* ES6 Example of returning the iteration of array */
+   const sm = winners.map((item,index) => {
+    console.log(item, index);
+   })
+   /* The above code is returning the data through each iteration of object */
+
+
+   /* An array - just a collection of data */
+   const people = [2,55,60,42,88,97,25];
+
+   /* a container called oldAge, which reads the array data through filter method then 
+   runs a function, function has a paramter and then check the condition defined inside
+   which is if the person is equal to or greater than 50 then store it into oldAge container */
+   const oldAge = people.filter( person => person >= 50 )
+   
+   /* To view the data passed through the condition */
+   console.log(oldAge);
     
-    const win = winners.map((winner,i) => ({
-       name: winner,
-       race,
-       place: i + 1
-    }));
-    
-   console.table(win);
-    
-    
-   // ES6 way of doing this       
-   const ages = [22,39,67,30,61,67,48,78];
-   const seniors = ages.filter(age => age >= 60)
-   console.table(seniors);
-   console.log('New way practiced above');    
-    
-    
-  // Old Javascript way of doing this - Just trying
-  var oldSeniors = ages.filter(function(personAge){
-    if (personAge >= 60) {
-        return personAge;
-    } 
-  });
-    
-  console.log('old way practiced above');
-  console.table(oldSeniors);    
-    
-    
+   /* Above example in old way */
+
+   var elderPeople = people.map(function(person){
+      if (person >= 50) {
+        return person;
+      }
+   })
+
+   console.log(elderPeople);
+
+   /* Above old way example is incomplete */
     
 </script>
     
