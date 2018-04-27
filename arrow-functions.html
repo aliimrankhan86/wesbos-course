@@ -9,23 +9,31 @@
 <script type="text/javascript">
     
     const names = ['Ali', 'Jawad', 'Salman', 'Kamran', 'Zeeshan'];
-    
+
+
+    /* Old Javascript way */
     const fullNames = names.map(function(name, index) {
         console.log(name + ' Khan');
     });
     
-    const fullNames2 = names.map((item) => {
+    /* ES6 way with multiple parameters */
+    const fullNames2 = names.map((item, index) => {
         console.log(item + ' Khan'); 
     })
     
+    /* ES6 way with single parameters */
     const fullNames3 = names.map(itemName => {
         console.log(itemName + ' khan');
     })
     
+    /* Es6 way with single parameter and function property */
     const fullNames4 = names.map(item => item + ' khan')
     
+    /* Es6 way with no parameter with function property */
     const fullNames5 = names.map(() => console.log('No Arguments'));
     
+
+    /* ES6 parameter and function */
     const sayMyName = (name) => {
         alert('Hello ' + name);
     }
