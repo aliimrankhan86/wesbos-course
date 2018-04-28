@@ -1,0 +1,32 @@
+<!DOCTYPE Html>
+<html>
+<head>
+<title>Arrow Functions Part 2 -> -></title>
+</head>
+<body>
+<h1>Arrow Functions Part 2 -> -></h1>    
+    
+<script type="text/javascript">
+    const family = ['Ali', 'Nazish', 'Anaya', 'Aizah'];
+
+    const fullFamily = family.map(name => {
+        document.write(name + ' Khan' + '<br>')
+    })
+
+    document.write('<br>');
+
+    const fullFamily2 = family.map((name) => {
+        document.write('Khan ' + name + '<br>')
+    })
+
+    document.write('<br>');
+
+    const fullFamily3 = family.map((name, index) => {
+        document.write(name + ' khan ' + index + '<br>')
+    })
+
+
+    
+</script>
+</body>
+</html>
